@@ -6,6 +6,7 @@ import { ListComponent } from './pages/list/list.component';
 import { HeroComponent } from './pages/hero/hero.component';
 import { AddComponent } from './pages/add/add.component';
 import { HeroesRoutingModule } from './heroes-routing.module';
+import { MaterialModule } from '../material/material.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,6 @@ import { HeroesRoutingModule } from './heroes-routing.module';
     ListComponent,
     HeroComponent,
   ],
-  imports: [CommonModule, HeroesRoutingModule],
+  imports: [CommonModule, HeroesRoutingModule, MaterialModule],
 })
 export class HeroesModule {}
