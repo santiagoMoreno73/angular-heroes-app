@@ -7,6 +7,8 @@ import { HeroComponent } from './pages/hero/hero.component';
 import { AddComponent } from './pages/add/add.component';
 import { HeroesRoutingModule } from './heroes-routing.module';
 import { MaterialModule } from '../material/material.module';
+import { HeroCardComponent } from './components/hero-card/hero-card.component';
+import { ImagenHeroPipe } from './pipes/imagen-hero.pipe';
 
 @NgModule({
   declarations: [
@@ -15,6 +17,8 @@ import { MaterialModule } from '../material/material.module';
     HomeComponent,
     ListComponent,
     HeroComponent,
+    HeroCardComponent,
+    ImagenHeroPipe,
   ],
   imports: [CommonModule, HeroesRoutingModule, MaterialModule],
 })
