@@ -4,4 +4,30 @@
   </mat-grid-tile>
 </mat-grid-list>
 
-<ng-template #divHero>Hi world</ng-template>
+<ng-template #divHero>
+  <div class="row">
+    <div class="col-sm-4">
+      <div class="d-flex align-items-center">
+        <h1>{{ hero.superhero }}</h1>
+        <small> - {{ hero.alter_ego }}</small>
+      </div>
+      <mat-divider></mat-divider>
+
+      <br />
+      <img [src]="hero | imagenHero" alt="img hero" />
+    </div>
+    <div class="col">
+      <h1>{{ hero.publisher }}</h1>
+
+      <mat-divider></mat-divider>
+      <mat-list>
+        <mat-list-item>{{ hero.first_appearance }}</mat-list-item>
+        <mat-list-item>{{ hero.characters }}</mat-list-item>
+        <mat-list-item>{{ hero.publisher }}</mat-list-item>
+        <mat-list-item>{{ hero.alter_ego }}</mat-list-item>
+      </mat-list>
+      <br />
+      <button mat-button color="warn" (click)="goBack()">Back</button>
+    </div>
+  </div>
+</ng-template>
