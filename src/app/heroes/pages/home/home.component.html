@@ -4,7 +4,7 @@
       <span>Menú</span>
 
       <span class="spacer"></span>
-      
+
       <button mat-icon-button (click)="sidenav.toggle()">
         <mat-icon>menu</mat-icon>
       </button>
@@ -21,7 +21,7 @@
         <span>Add Hero</span>
       </a>
 
-      <a routerLink="./search" mat-list-item (click)="sidenav.toggle()">
+      <a routerLink="./search" mat-list-item>
         <mat-icon matListItemIcon>search</mat-icon>
         <span>Search Hero</span>
       </a>
@@ -40,7 +40,7 @@
     </button>
   </mat-toolbar>
 
-  <div class="container">
+  <div class="container-home">
     <router-outlet></router-outlet>
   </div>
 </mat-sidenav-container>

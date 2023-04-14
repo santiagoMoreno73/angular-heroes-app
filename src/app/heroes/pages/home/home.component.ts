@@ -5,8 +5,8 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
   styles: [
     `
-      .container {
-        margin: 10px;
+      .container-home {
+        margin: 30px;
       }
     `,
   ],
