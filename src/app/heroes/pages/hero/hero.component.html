@@ -1,1 +1,7 @@
-<p>hero works!</p>
+<mat-grid-list cols="1" rowHeight="100px" *ngIf="!hero; else divHero">
+  <mat-grid-tile>
+    <mat-spinner></mat-spinner>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<ng-template #divHero>Hi world</ng-template>
