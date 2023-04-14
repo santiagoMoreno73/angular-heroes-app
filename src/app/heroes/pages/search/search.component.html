@@ -33,7 +33,8 @@
     </mat-form-field>
   </div>
 
-  <div class="col">
+  <div class="col" *ngIf="heroSelected">
     {{ heroSelected | json }}
+    <app-hero-card [hero]="heroSelected"></app-hero-card>
   </div>
 </div>
