@@ -1,20 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import { LoginComponent } from './pages/login/login.component';
-import { RegisterComponent } from './pages/register/register.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { LayoutPageComponent } from './pages/layout-page/layout-page.component';
 
 const routes: Routes = [
   {
     path: '',
+    component: LayoutPageComponent,
     children: [
       {
         path: 'login',
-        component: LoginComponent,
+        component: LoginPageComponent,
       },
       {
-        path: 'register',
-        component: RegisterComponent,
+        path: 'new-account',
+        component: RegisterPageComponent,
       },
       {
         path: '**',
@@ -28,4 +29,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class AuthRoutingModule {}
+export class AuthRoutingModule { }

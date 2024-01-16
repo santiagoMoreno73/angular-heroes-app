@@ -4,13 +4,12 @@ import { Hero } from '../../interfaces/hero.interface';
 
 @Component({
   selector: 'app-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.css'],
+  templateUrl: './list-page.component.html',
 })
-export class ListComponent implements OnInit {
+export class ListPageComponent implements OnInit {
   heroes: Hero[] = [];
 
-  constructor(private heroesServices: HeroesService) {}
+  constructor(private heroesServices: HeroesService) { }
 
   ngOnInit(): void {
     this.heroesServices

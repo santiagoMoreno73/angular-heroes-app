@@ -8,8 +8,8 @@ import { HeroesService } from '../../services/heroes.service';
 import { Hero } from '../../interfaces/hero.interface';
 
 @Component({
-  selector: 'app-hero',
-  templateUrl: './hero.component.html',
+  selector: 'app-hero-page',
+  templateUrl: './hero-page.component.html',
   styles: [
     `
       img {
@@ -23,25 +23,28 @@ import { Hero } from '../../interfaces/hero.interface';
     `,
   ],
 })
-export class HeroComponent implements OnInit {
+export class HeroPageComponent implements OnInit {
   hero!: Hero;
 
   constructor(
     private activatedRoute: ActivatedRoute,
     private serviceHero: HeroesService,
     private router: Router
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     this.activatedRoute.params
       .pipe(
-        switchMap(({ id }) => this.serviceHero.getHeroById(id)),
-        tap(console.log)
+        switchMap(({ id }) => this.serviceHero.getHeroById(id))
       )
-      .subscribe((hero) => (this.hero = hero));
+      .subscribe((hero) => {
+        return hero ?
+          this.hero = hero :
+          this.router.navigate(['/heroes/list']);
+      });
   }
 
   goBack() {
-    this.router.navigate(['hero/list']);
+    this.router.navigateByUrl('hero/list');
   }
 }

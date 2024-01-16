@@ -12,3 +12,15 @@ body {
 .spacer {
     flex: 1 1 auto;
 }
+
+.hero-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-image {
+    max-width: 400px;
+    max-height: 700px;
+    margin: auto; /* Esto centrará la imagen horizontalmente */
+}

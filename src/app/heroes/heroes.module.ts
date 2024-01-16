@@ -1,26 +1,34 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { SearchComponent } from './pages/search/search.component';
-import { HomeComponent } from './pages/home/home.component';
-import { ListComponent } from './pages/list/list.component';
-import { HeroComponent } from './pages/hero/hero.component';
-import { AddComponent } from './pages/add/add.component';
-import { HeroesRoutingModule } from './heroes-routing.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MaterialModule } from '../material/material.module';
+
+import { HeroesRoutingModule } from './heroes-routing.module';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
-import { ImagenHeroPipe } from './pipes/imagen-hero.pipe';
-import { FormsModule } from '@angular/forms';
+import { HeroPageComponent } from './pages/hero-page/hero-page.component';
+import { ListPageComponent } from './pages/list-page/list-page.component';
+import { HomePageComponent } from './pages/home-page/home-page.component';
+import { SearchPageComponent } from './pages/search-page/search-page.component';
+import { AddPageComponent } from './pages/add-page/add-page.component';
+import { ConfirmDialogComponent } from './components/confirm-dialog/confirm-dialog.component';
+import { HeroImagePipe } from "./pipes/hero-image.pipe";
 
 @NgModule({
   declarations: [
-    AddComponent,
-    SearchComponent,
-    HomeComponent,
-    ListComponent,
-    HeroComponent,
+    AddPageComponent,
+    SearchPageComponent,
+    HomePageComponent,
+    ListPageComponent,
+    HeroPageComponent,
     HeroCardComponent,
-    ImagenHeroPipe,
+    HeroImagePipe,
+    ConfirmDialogComponent
   ],
-  imports: [CommonModule, FormsModule, HeroesRoutingModule, MaterialModule],
+  imports: [
+    CommonModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HeroesRoutingModule,
+    MaterialModule],
 })
-export class HeroesModule {}
+export class HeroesModule { }

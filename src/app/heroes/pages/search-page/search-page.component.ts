@@ -4,16 +4,15 @@ import { HeroesService } from '../../services/heroes.service';
 import { MatAutocompleteSelectedEvent } from '@angular/material/autocomplete';
 
 @Component({
-  selector: 'app-search',
-  templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
+  selector: 'app-search-page',
+  templateUrl: './search-page.component.html',
 })
-export class SearchComponent {
+export class SearchPageComponent {
   term: string = '';
   heroes: Hero[] = [];
   heroSelected: Hero | undefined;
 
-  constructor(private heroesService: HeroesService) {}
+  constructor(private heroesService: HeroesService) { }
 
   search() {
     this.heroesService

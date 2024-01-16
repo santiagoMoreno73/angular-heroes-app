@@ -10,6 +10,10 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   exports: [
@@ -24,6 +28,10 @@ import { MatInputModule } from '@angular/material/input';
     MatToolbarModule,
     MatGridListModule,
     MatFormFieldModule,
+    MatChipsModule,
+    MatSelectModule,
+    MatSnackBarModule,
+    MatDialogModule
   ],
 })
-export class MaterialModule {}
+export class MaterialModule { }

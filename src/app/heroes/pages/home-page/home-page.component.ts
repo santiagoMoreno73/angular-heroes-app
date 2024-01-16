@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-home',
-  templateUrl: './home.component.html',
+  templateUrl: './home-page.component.html',
   styles: [
     `
       .container-home {
@@ -11,4 +11,4 @@ import { Component } from '@angular/core';
     `,
   ],
 })
-export class HomeComponent {}
+export class HomePageComponent { }

@@ -1,0 +1,20 @@
+<div class="flex flex-column p-2">
+  <h1>Search heroes</h1>
+  <mat-form-field style="width: 100%" appearance="fill">
+    <mat-label for="search_hero">Write your hero ...</mat-label>
+    <input type="text" name="search_hero" id="search_hero" matInput [(ngModel)]="term" [matAutocomplete]="auto"
+      (input)="search()" />
+    <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" (optionSelected)="optionSelected($event)">
+      <mat-option *ngIf="heroes.length === 0 && term && term.trim().length > 0" [value]="">
+        Not found hero with term: {{ term }}
+      </mat-option>
+      <mat-option *ngFor="let hero of heroes" [value]="hero">
+        {{ hero.superhero }}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+
+  <div class="grid mb-8 pt-2" *ngIf="heroSelected">
+    <app-hero-card [hero]="heroSelected"></app-hero-card>
+  </div>
+</div>
