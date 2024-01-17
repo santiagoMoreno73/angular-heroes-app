@@ -9,7 +9,7 @@
         <input type="password" name="user_password" id="user_password" matInput placeholder="Password">
     </mat-form-field>
 
-    <button mat-button mat-flat-button color="primary">
+    <button mat-button mat-flat-button (click)="onLogin()" color="primary">
         <mat-icon>save</mat-icon>
         Login
     </button>
